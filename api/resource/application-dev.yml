@@ -1,0 +1,11 @@
+print-status: False
+
+api:
+    database:
+        dialect: ${DATABASE_DIALECT:sqlite}
+        settings:
+            check_same_thread: False
+
+swagger:
+    schemes: [https]
+    host: ${SWAGGER_HOST:localhost}

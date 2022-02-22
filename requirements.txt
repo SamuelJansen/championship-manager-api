@@ -1,0 +1,4 @@
+python-framework>=0.2.231
+beautifulsoup4==4.9.3
+selenium==3.141.0
+webdriver_manager==3.2.1

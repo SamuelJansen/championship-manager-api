@@ -1,0 +1,61 @@
+print-status: False
+api:
+    name: ChampionshipManagerApi
+    extension: yml
+    dependency:
+        update: False
+        list:
+            web: [Popen,Path]
+            local: []
+    list: [globals]
+    language: EN-US
+    git:
+        url: https://github.com/SamuelJansen/
+        extension: git
+
+    session:
+        secret: ${SESSION_SECRET:default}
+    api-key:
+        secret: ${API_KEY_SECRET:default}
+    security:
+        secret: ${SECURITY_SECRET:default}
+    server:
+        scheme: http
+        host: 0.0.0.0
+        port: 6088
+        base-url: /championship-manager-api
+    scheduler:
+        enable: ${ENABLE_SCHEDULER_API:True}
+
+browser:
+    user-agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'
+    max-waiting-time: 3
+    hidden: True
+
+aix-sports:
+    base-url: ${AIX_SPORTS_BASE_URL:None}
+    authority: ${AIX_SPORTS_AUTHORITY:None}
+    session-token: ${AIX_SPORTS_SESSION_TOKEN:None}
+    championship:
+        url: ${AIX_SPORTS_CHAMPIONSHIP_URL:None}
+        timeout: 10
+        id-placeholder: ${AIX_SPORTS_CHAMPIONSHIP_ID_PLACEHOLDER:None}
+        destiny-url: ${AIX_SPORTS_CHAMPIONSHIP_DESTINY_URL:None}
+
+swagger:
+    # schemes: [${api.server.scheme}] ###- bug
+    # host: ${SWAGGER_HOST:${api.server.host}}:${api.server.port} ###- bug
+    info:
+        # title: ${api.name} ###- commented to make use of auto title and auto description
+        # description: Shift Api
+        version: 0.0.1
+        terms-of-service: http://swagger.io/terms/
+        contact:
+            name: Samuel Jansen
+            email: samuel.jansenn@gmail.com
+        license:
+            name: Apache 2.0 / MIT License
+            url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+python:
+    version: 3.9

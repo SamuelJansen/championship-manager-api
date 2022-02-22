@@ -1,0 +1,37 @@
+import AixSportsConfig as ASC
+
+
+DATA_HEADER_KEY = 'data_header'
+
+TEAM_POINT = {
+    DATA_HEADER_KEY: 'P',
+    **ASC.TEAM_POINT
+}
+TEAM_PLAYED_GAMES = {
+    DATA_HEADER_KEY: 'J',
+    **ASC.TEAM_PLAYED_GAMES
+}
+VICTORIES = {
+    DATA_HEADER_KEY: 'V',
+    **ASC.VICTORIES
+}
+DRAWS = {
+    DATA_HEADER_KEY: 'E',
+    **ASC.DRAWS
+}
+LOSSES = {
+    DATA_HEADER_KEY: 'D',
+    **ASC.LOSSES
+}
+UP_GOALS = {
+    DATA_HEADER_KEY: 'GP',
+    **ASC.UP_GOALS
+}
+DOWN_GOALS = {
+    DATA_HEADER_KEY: 'GC',
+    **ASC.DOWN_GOALS
+}
+NET_GOALS = {
+    DATA_HEADER_KEY: 'SG',
+    **ASC.NET_GOALS
+}
