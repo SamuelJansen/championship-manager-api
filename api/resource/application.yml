@@ -22,7 +22,7 @@ api:
     server:
         scheme: http
         host: 0.0.0.0
-        port: 6088
+        port: 6087
         base-url: /championship-manager-api
     scheduler:
         enable: ${ENABLE_SCHEDULER_API:True}
